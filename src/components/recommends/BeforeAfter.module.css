@@ -1,0 +1,114 @@
+.container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-family: "Assistant";
+  text-align: center;
+  margin: 1% auto;
+  direction: rtl;
+  width: 100%;
+  font-weight: 800;
+  color: black;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.explain {
+  font-size: 25px;
+  direction: rtl;
+  width: 65%;
+  color: black;
+  text-align: center;
+  margin: 2% auto;
+  font-family: "AssistantR";
+}
+
+.scrollTrack {
+  display: flex;
+  width: fit-content;
+  animation: scroll 30s linear infinite;
+  gap: 20px; /* מרווח בין הקבוצות */
+}
+
+.scrollContainer {
+  display: flex;
+  gap: 80px; /* Significantly increased gap between images */
+  padding: 20px 0;
+}
+
+.imageWrapper {
+  flex-shrink: 0;
+  /* הקטנת הגובה מ-300px ל-220px */
+  height: 220px;
+}
+
+.image {
+  /* הקטנת הגובה מ-300px ל-220px */
+  height: 220px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 450px) {
+  .title {
+    font-size: 2rem;
+  }
+  
+  .explain {
+    font-size: 18px;
+    width: 90%;
+  }
+
+  .imageWrapper {
+    /* הקטנת הגובה מ-250px ל-180px */
+    height: 180px;
+  }
+  
+  .image {
+    /* הקטנת הגובה מ-250px ל-180px */
+    height: 180px;
+  }
+  
+  .scrollContainer {
+    gap: 60px;
+  }
+}
+
+@media only screen and (min-width: 451px) and (max-width: 1050px) {
+  .title {
+    font-size: 2.2rem;
+  }
+  
+  .explain {
+    font-size: 20px;
+    width: 80%;
+  }
+
+  .imageWrapper {
+    /* הקטנת הגובה מ-270px ל-200px */
+    height: 200px;
+  }
+  
+  .image {
+    /* הקטנת הגובה מ-270px ל-200px */
+    height: 200px;
+  }
+  
+  .scrollContainer {
+    gap: 70px;
+  }
+}

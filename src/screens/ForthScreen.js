@@ -1,4 +1,5 @@
 import BeforeAfter from "../components/recommends/BeforeAfter"
+import Button from "../components/WaButton/Button"
 import styles from "./ForthScreen.module.css"
 import { Clock, RefreshCw, Eye, Sparkles, DropletIcon, SunIcon, Award, Fingerprint, Wand2 } from "lucide-react"
 
@@ -96,10 +97,7 @@ const ForthScreen = () => {
             <Sparkles size={22} strokeWidth={1} className={styles.benefitIcon} />
             <p className={styles.benefitText}>ביטחון עם ריסים מלאים ומרשימים - בלי צורך במסקרה</p>
           </div>
-          <div className={styles.benefit}>
-            <DropletIcon size={22} strokeWidth={1} className={styles.benefitIcon} />
-            <p className={styles.benefitText}>חופש מדאגות - לשחות, להתקלח ולהתאפר בלי לחשוש</p>
-          </div>
+   
           <div className={styles.benefit}>
             <Clock size={22} strokeWidth={1} className={styles.benefitIcon} />
             <p className={styles.benefitText}>רווח של זמן יקר בבקרים - כמו מתנה של 10 דקות נוספות</p>
@@ -122,7 +120,7 @@ const ForthScreen = () => {
       <div className={styles.ctaSection}>
         <h2 className={styles.ctaTitle}>מוכנה למראה חדש?</h2>
         <p className={styles.ctaText}>קבעי תור עכשיו לחוויית שזירת ריסים מקצועית</p>
-        <button className={styles.ctaButton}>לקביעת תור</button>
+       <Button text="תלחצי כאן ונדבר" message="היי גלי הגעתי מהדף, אשמח לשמוע עוד על שזירת ריסים"/>
       </div>
     </div>
   )

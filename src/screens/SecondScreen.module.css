@@ -25,7 +25,7 @@
     max-width: 1200px;
     margin: 2% auto;
     overflow-x: hidden;
-    background: linear-gradient(135deg, rgba(255, 253, 250, 0.4) 0%, rgba(255, 245, 245, 0.4) 100%);
+    
     padding: 2rem 0;
     border-radius: 20px;
 }

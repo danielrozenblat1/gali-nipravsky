@@ -3,7 +3,7 @@ import Works from "../components/recommends/Works"
 import styles from "./ThirdScreen.module.css"
 import lips from "../Icons/wired-outline-1597-lips-hover-pinch (3).json"
 import makeup from "../Icons/wired-outline-1589-makeup-mirror-hover-pinch (3).json"
-import lipstick from "../Icons/wired-outline-1589-makeup-mirror-hover-pinch (3).json"
+import lipstick from "../Icons/wired-outline-590-glass-water-loop-cycle.json"
 
 const ThirdScreen = () => {
    

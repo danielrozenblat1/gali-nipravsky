@@ -42,7 +42,7 @@
 }
   
 .centerImage {
-    background-image: url('../images/גלי\ ניפרבסקי\ תמונה\ מרכזית.png');
+    background-image: url('../images/גלי\ ניפרבסקי\ תמונה\ ראשית.png');
 }
   
 .contentBox {
@@ -143,13 +143,13 @@
 @media (min-width: 550px) {
     .leftImage {
         display: block;
-        opacity: 0.3;
+        
         background-image: url('../images/גלי\ ניפרבסקי\ תמונה\ שמאלית.png');
     }
     .rightImage {
         display: block;
         background-image: url('../images/גלי\ ניפרבסקי\ תמונה\ ימנית.png');
-        opacity: 0.3;
+        
     }
     .contentBox {
         padding: 1.8rem;

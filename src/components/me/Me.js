@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Me.module.css';
-import gali from "../../images/גלי ניפרבסקי תמונה מרכזית.png";
+import gali from "../../images/גלי תדמית.png";
 import Recommendations from '../recommends/Recommends';
 import BeforeAfter from '../recommends/BeforeAfter';
 

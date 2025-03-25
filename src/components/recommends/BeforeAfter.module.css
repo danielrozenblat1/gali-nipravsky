@@ -35,21 +35,20 @@
 
 .scrollContainer {
   display: flex;
-  gap: 80px; /* Significantly increased gap between images */
+  gap: 40px; /* מרווח מוקטן בין התמונות */
   padding: 20px 0;
 }
 
 .imageWrapper {
   flex-shrink: 0;
-  /* הקטנת הגובה מ-300px ל-220px */
+  width: 220px; /* הוספת רוחב קבוע */
   height: 220px;
 }
 
 .image {
-  /* הקטנת הגובה מ-300px ל-220px */
-  height: 220px;
-  width: auto;
-  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* שינוי מ-contain ל-cover */
   border-radius: 8px;
 }
 
@@ -74,17 +73,17 @@
   }
 
   .imageWrapper {
-    /* הקטנת הגובה מ-250px ל-180px */
+    width: 180px; /* הוספת רוחב קבוע */
     height: 180px;
   }
   
   .image {
-    /* הקטנת הגובה מ-250px ל-180px */
-    height: 180px;
+    width: 100%;
+    height: 100%;
   }
   
   .scrollContainer {
-    gap: 60px;
+    gap: 30px; /* הקטנת הרווח במובייל */
   }
 }
 
@@ -99,16 +98,16 @@
   }
 
   .imageWrapper {
-    /* הקטנת הגובה מ-270px ל-200px */
+    width: 200px; /* הוספת רוחב קבוע */
     height: 200px;
   }
   
   .image {
-    /* הקטנת הגובה מ-270px ל-200px */
-    height: 200px;
+    width: 100%;
+    height: 100%;
   }
   
   .scrollContainer {
-    gap: 70px;
+    gap: 35px; /* מרווח מותאם לטאבלט */
   }
 }

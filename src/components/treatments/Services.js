@@ -53,7 +53,7 @@ const Services = () => {
 
   return <>
     <div className={styles.servicesContainer}>
-      <h2 className={styles.servicesTitle}>וזה קורה ככה:</h2>
+      <h2 className={styles.servicesTitle}>וזה קורה כך:</h2>
       <p className={styles.servicesSubtitle}>טיפולי הלייזר המתקדמים שלי מאפשרים לך להשתחרר מאיפור קבוע וקעקועים שאינך אוהבת יותר, וליהנות מעור פנים צעיר ורענן - תהליך בטוח, מקצועי ועם תוצאות מוכחות</p>
       
       <div className={styles.servicesGrid}>

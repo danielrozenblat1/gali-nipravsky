@@ -5,7 +5,7 @@ import { Clock, RefreshCw, Eye, Sparkles, DropletIcon, SunIcon, Award, Fingerpri
 
 const ForthScreen = () => {
    
-  return (
+  return <>
     <div className={styles.container}>
       <div className={styles.header}>
         <h1 className={styles.title} id="שזירת ריסים">אם את כאן</h1>
@@ -52,7 +52,7 @@ const ForthScreen = () => {
           <div className={styles.infoCard}>
             <RefreshCw size={28} strokeWidth={1} className={styles.infoIcon} />
             <h3 className={styles.infoTitle}>תחזוקה</h3>
-            <p className={styles.infoText}>טיפול רענון אחת לשלושה שבועות</p>
+            <p className={styles.infoText}>מילוי הריסים אחת לשלושה שבועות</p>
           </div>
 
           <div className={styles.infoCard}>
@@ -84,7 +84,7 @@ const ForthScreen = () => {
             <span className={styles.stepNumber}>03</span>
             <div className={styles.stepContent}>
               <h3 className={styles.stepTitle}>ביצוע השזירה</h3>
-              <p className={styles.stepText}>תהליך מקצועי ומדויק תוך שימוש בחומרים טבעיים איכותיים ממושי קשמיר</p>
+              <p className={styles.stepText}>תהליך מקצועי ומדויק תוך שימוש בחומרים טבעיים איכותיים ממשי,קשמיר מינק</p>
             </div>
           </div>
         </div>
@@ -117,13 +117,15 @@ const ForthScreen = () => {
         </div>
       </div>
 
-      <div className={styles.ctaSection}>
-        <h2 className={styles.ctaTitle}>מוכנה למראה חדש?</h2>
-        <p className={styles.ctaText}>קבעי תור עכשיו לחוויית שזירת ריסים מקצועית</p>
-       <Button text="תלחצי כאן ונדבר" message="היי גלי הגעתי מהדף, אשמח לשמוע עוד על שזירת ריסים"/>
-      </div>
     </div>
-  )
+          <BeforeAfter/>
+          <div className={styles.ctaSection}>
+            <h2 className={styles.ctaTitle}>מוכנה למראה חדש?</h2>
+            
+            <p className={styles.ctaText}>קבעי תור עכשיו לחוויית שזירת ריסים מקצועית</p>
+           <Button text="תלחצי כאן ונדבר" message="היי גלי הגעתי מהדף, אשמח לשמוע עוד על שזירת ריסים"/>
+          </div>
+  </>
 }
 
 export default ForthScreen

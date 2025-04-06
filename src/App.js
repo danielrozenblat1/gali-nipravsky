@@ -9,6 +9,7 @@ import ByMe from './components/ByMe/ByMe';
 import BeforeAfter from './components/recommends/BeforeAfter';
 import NavBarNew from './components/CourseNav/NavBarNew';
 import ForthScreen from './screens/ForthScreen';
+import FifthScreen from './screens/FifthScreen';
 
 function App() {
   return <>
@@ -20,6 +21,7 @@ function App() {
    <Etos/>
   <ThirdScreen/>
 <ForthScreen/>
+<FifthScreen/>
   <ByMe/>
    </>
 

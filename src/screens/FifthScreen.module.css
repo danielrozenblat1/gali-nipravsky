@@ -1,0 +1,33 @@
+.title {
+    font-family: 'Assistant', sans-serif;
+    font-size: 2rem;
+    margin: 2% auto;
+    text-align: center;
+    direction: rtl;
+    font-weight: bold;
+    color: #ce277a; /* ורוד בוהק אלגנטי */
+ 
+}
+/* עד 350px */
+@media (max-width: 350px) {
+    .title {
+        font-size: 1.6rem;
+        width: 95%;
+    }
+}
+
+/* 350–450px */
+@media (min-width: 351px) and (max-width: 450px) {
+    .title {
+        font-size: 1.8rem;
+        width: 94%;
+    }
+}
+
+/* 450–550px */
+@media (min-width: 451px) and (max-width: 550px) {
+    .title {
+        font-size: 2rem;
+        width: 93%;
+    }
+}

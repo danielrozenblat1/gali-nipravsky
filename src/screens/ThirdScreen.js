@@ -4,7 +4,8 @@ import styles from "./ThirdScreen.module.css"
 import lips from "../Icons/wired-outline-1597-lips-hover-pinch (3).json"
 import makeup from "../Icons/wired-outline-1589-makeup-mirror-hover-pinch (3).json"
 import lipstick from "../Icons/wired-outline-590-glass-water-loop-cycle.json"
-
+import brush from "../Icons/wired-outline-1587-cosmetic-brush-hover-pinch (7).json"
+import WorksBrows from "../components/recommends/WorksBrows"
 const ThirdScreen = () => {
    
   return (
@@ -31,10 +32,15 @@ const ThirdScreen = () => {
           description="כל בוקר מחדש לקום מוקדם יותר כדי להשקיע במראה שלך, לנסות להשיג סימטריה מושלמת, ובסוף להתפשר כי את כבר מאחרת לעבודה.." 
           icon={makeup}
         />
+     <Bonus 
+  title="להסתיר עם איפור את הדלילות בגבות" 
+  description="לנסות בכל בוקר מחדש למלא את האזורים החסרים בגבות, להתמודד עם אסימטריה טבעית, ובסוף לקבל מראה לא טבעי שמרגיש כמו מסיכה" 
+  icon={brush}
+/>
       </div>
       <div className={styles.description}>ואם הגעת למסקנה <span style={{textDecoration:"underline"}}>שהגיע הזמן לשינוי</span> <br/>אז אני כאן כדי לעשות סדר</div>
 
-      <div className={styles.title}>בעזרת איפור קבוע:</div>
+      <div className={styles.title}>בעזרת איפור קבוע לשפתיים:</div>
 
       <div className={styles.advantages}>
         <div className={styles.advantageBox}>
@@ -51,7 +57,7 @@ const ThirdScreen = () => {
         </div>
         <div className={styles.advantageBox}>
           <div className={styles.checkmark}>✓</div>
-          <p>תוכלי להתאמן,לעשן,לשתות מכוסות והפעם.. לא יימרח כלום</p>
+          <p>תוכלי להתאמן ולשתות מכוסות אבל הפעם.. לא יימרח כלום</p>
         </div>
         <div className={styles.advantageBox}>
           <div className={styles.checkmark}>✓</div>
@@ -60,7 +66,27 @@ const ThirdScreen = () => {
       </div>
 
       <Works/>
+      <div className={styles.title}>בעזרת איפור קבוע לגבות:</div>
+      <div className={styles.advantages}>
+        <div className={styles.advantageBox}>
+          <div className={styles.checkmark}>✓</div>
+          <p>תזכי לגבות מעוצבות ומדויקות שיישארו איתך לאורך זמן</p>
+        </div>
+        <div className={styles.advantageBox}>
+          <div className={styles.checkmark}>✓</div>
+          <p>תיפטרי מהצורך למלא ולצבוע גבות דלילות כל בוקר</p>
+        </div>
+        <div className={styles.advantageBox}>
+          <div className={styles.checkmark}>✓</div>
+          <p>תתקני אסימטריה וחוסר איזון טבעי בגבות</p>
+        </div>
+        <div className={styles.advantageBox}>
+          <div className={styles.checkmark}>✓</div>
+          <p>תזכי למראה טבעי ומאוורר שמותאם בדיוק למבנה הפנים שלך</p>
+        </div>
 
+      </div>
+      <WorksBrows/>
       </div>
     </>
   )

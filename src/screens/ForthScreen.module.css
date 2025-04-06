@@ -328,7 +328,8 @@ p {
 /* סקשן CTA - עיצוב מיוחד */
 .ctaSection {
   text-align: center;
-  margin: 3.5rem 0;
+  margin: 3.5rem auto;
+  width:70%;
   padding: 2.5rem 1.5rem;
   background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(15px);

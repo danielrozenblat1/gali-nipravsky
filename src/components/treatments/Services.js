@@ -4,7 +4,13 @@ import styles from './Services.module.css';
 import Button from '../WaButton/Button';
 import { Plus, Minus, User, Check, ThumbsUp, CheckCircle } from 'lucide-react';
 
-import processImage from "../../images/פיקו מילניום.png" // תמונה לתהליך העבודה
+import processImage from "../../images/פיקו מילניום.png"; // תמונה לתהליך העבודה
+
+// תמונות נוספות של המכשיר
+import additionalImage1 from "../../images/פיקו 1.png";
+import additionalImage2 from "../../images/פיקו 2.png";
+import additionalImage3 from "../../images/פיקו 3.png";
+import additionalImage4 from "../../images/פיקו 4.png";
 
 const Services = () => {
   // מצב לשליטה על הקופסאות הפתוחות - שינוי למערך כדי לאפשר מספר קופסאות פתוחות
@@ -20,6 +26,14 @@ const Services = () => {
       setOpenAccordions([...openAccordions, id]);
     }
   };
+
+  // מערך תמונות נוספות
+  const additionalImages = [
+    { src: additionalImage1, alt: "מכשיר לייזר PICO MILLENIUM - זווית 1" },
+    { src: additionalImage2, alt: "מכשיר לייזר PICO MILLENIUM - זווית 2" },
+    { src: additionalImage3, alt: "מכשיר לייזר PICO MILLENIUM - זווית 3" },
+    { src: additionalImage4, alt: "מכשיר לייזר PICO MILLENIUM - זווית 4" }
+  ];
 
   const services = [
     {
@@ -147,6 +161,21 @@ const Services = () => {
             alt="מכשיר לייזר +BEAM" 
             className={styles.processImage} 
           />
+        </div>
+      </div>
+
+      <div className={styles.additionalImagesSection}>
+        <h4 className={styles.additionalImagesTitle}>תמונות נוספות מהמכשיר</h4>
+        <div className={styles.additionalImagesGrid}>
+          {additionalImages.map((image, index) => (
+            <div key={index} className={styles.additionalImageContainer}>
+              <img 
+                src={image.src} 
+                alt={image.alt} 
+                className={styles.additionalImage} 
+              />
+            </div>
+          ))}
         </div>
       </div>
     </div>

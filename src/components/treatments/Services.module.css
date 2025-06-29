@@ -1,0 +1,643 @@
+/* Services.module.css */
+.servicesContainer {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  direction: rtl;
+}
+
+.servicesTitle,
+.servicesSubtitle {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.servicesTitle {
+  font-size: 2.2rem;
+  font-weight: 700;
+  font-family: 'Assistant', sans-serif;
+  color: #ce277a; /* ורוד כהה יותר */
+}
+
+.servicesSubtitle {
+  font-size: 1.1rem;
+  color: #ce277a; /* ורוד כהה יותר */
+  margin-bottom: 2rem;
+  font-family: 'AssistantR', sans-serif;
+}
+
+.servicesGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.serviceCard {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #ffffff; /* לבן נקי במקום שמנת */
+  border-radius: 8px;
+  overflow: visible; /* שינוי מ-hidden ל-visible כדי שהכפתור לא ייחתך */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease;
+  border: 1px solid #f8b3d1; /* ורוד בהיר */
+  position: relative;
+}
+
+.serviceCard:hover {
+  box-shadow: 0 4px 12px rgba(206, 39, 122, 0.2); /* צל ורוד */
+}
+
+/* סגנון חדש לאזור הכותרת שיפעל כלחצן להרחבה וכיווץ */
+.serviceHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  cursor: pointer;
+  background-color: #ffffff;
+  transition: background-color 0.3s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.serviceHeader:hover {
+  background-color: rgba(248, 179, 209, 0.1); /* ורוד בהיר שקוף */
+}
+
+/* כשהאקורדיון פתוח */
+.serviceCard:has(.serviceContent) .serviceHeader {
+  border-bottom: 1px solid #f8b3d1; /* קו ורוד בתחתית הכותרת כשפתוח */
+}
+
+.accordionIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ce277a; /* ורוד כהה יותר */
+  width: 30px;
+  height: 30px;
+}
+
+.serviceContent {
+  flex-grow: 1;
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  width: 100%;
+  position: relative;
+  padding-bottom: 5rem; /* הגדלתי את הפדינג בתחתית */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word; /* מוסיף שבירת מילים ארוכות */
+  box-sizing: border-box; /* מוודא שהפדינג נכלל בחישוב הרוחב */
+  max-width: 100%; /* שומר על גבולות הקונטיינר */
+  animation: fadeIn 0.3s ease-in-out;
+  overflow: hidden; /* מונע גלישה מחוץ לקונטיינר */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.serviceTitle {
+  font-family: 'Assistant', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  color: #ce277a; /* ורוד כהה יותר */
+}
+
+.serviceDetails {
+  flex-grow: 1;
+  margin: 0.5rem 0 1.5rem 0;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box; /* מוודא שהפדינג נכלל בחישוב הרוחב */
+}
+
+.serviceDetailItem {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 0.75rem;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box; /* מוודא שהפדינג נכלל בחישוב הרוחב */
+}
+
+.serviceDetailIcon {
+  margin-left: 0.75rem;
+  color: #f06292; /* ורוד בהיר יותר חזק */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.serviceDetailText {
+  flex-grow: 1;
+  max-width: 100%;
+  overflow: hidden; /* מונע גלישה */
+  width: 100%; /* מגדיר רוחב מלא */
+}
+
+.serviceDetailLabel {
+  font-family: 'Assistant', sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #ce277a; /* ורוד כהה יותר */
+  margin: 0 0 0.25rem 0;
+}
+
+.serviceDetailValue {
+  font-family: 'AssistantR', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #4a4a4a; /* אפור כהה יותר */
+  margin: 0;
+  width: 90%;
+  margin-right: 0;
+  margin-left: auto;
+  text-align: right;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word; /* מוסיף שבירת מילים ארוכות */
+  hyphens: auto;
+  max-width: 100%; /* מגביל את הרוחב המקסימלי */
+  box-sizing: border-box; /* מוודא שהפדינג נכלל בחישוב הרוחב */
+}
+
+.serviceButtonContainer {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 4.5rem; /* הזזתי עוד יותר ימינה - מ-3.5rem ל-4.5rem */
+  width: auto;
+  z-index: 5;
+  text-align: left; /* וודא שהטקסט מיושר לשמאל */
+}
+
+/* תהליך העבודה - סגנון מעודכן */
+.additionalInfoContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  background-color: #ffffff; /* לבן נקי במקום השמנת */
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+  text-align: right;
+  border-right: 3px solid #f06292; /* ורוד בהיר יותר חזק */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.additionalInfo {
+  flex: 1;
+}
+
+.additionalInfo p {
+  margin: 0.5rem 0;
+  line-height: 1.6;
+  font-family: 'AssistantR', sans-serif;
+  color: #4a4a4a; /* אפור כהה יותר */
+}
+
+/* עיצוב רשימת היתרונות */
+.beamBenefitsList {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 1rem 0;
+}
+
+.beamBenefitsList li {
+  position: relative;
+  padding-right: 1.8rem;
+  margin-bottom: 0.5rem;
+  font-family: 'AssistantR', sans-serif;
+  color: #4a4a4a;
+  line-height: 1.6;
+}
+
+.beamBenefitsList li::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0.5rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color: #f06292; /* ורוד בהיר יותר חזק */
+  border-radius: 50%;
+}
+
+.processImageContainer {
+  flex: 0 0 300px; /* רוחב קבוע לתמונה */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.processImage {
+  width: 100%;
+  height: auto;
+  max-height: 350px;
+  object-fit: contain; /* שונה מ-cover ל-contain */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(206, 39, 122, 0.2); /* צל ורוד */
+}
+
+/* סגנון לכותרת המידע */
+.infoTitle {
+  font-family: 'Assistant', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  color: #ce277a; /* ורוד כהה יותר */
+  text-align: right;
+}
+
+/* Responsive styles */
+
+/* מתחת ל-350px */
+@media (max-width: 349px) {
+  .servicesContainer {
+    padding: 1rem 0.5rem;
+  }
+  
+  .servicesTitle {
+    font-size: 1.8rem; /* הגדלתי את הגודל */
+  }
+  
+  .servicesSubtitle {
+    font-size: 1rem; /* הגדלתי את הגודל */
+  }
+  
+  .serviceHeader {
+    padding: 1rem;
+  }
+  
+  .serviceContent {
+    padding: 1rem;
+    padding-bottom: 4.5rem; /* הגדלנו כדי לוודא שיש מקום לכפתור */
+  }
+  
+  .serviceTitle {
+    font-size: 1.3rem; /* הגדלתי את הגודל */
+  }
+  
+  .serviceDetailLabel {
+    font-size: 0.9rem; /* הגדלתי את הגודל */
+  }
+  
+  .serviceDetailValue {
+    font-size: 0.9rem; /* הגדלתי את הגודל */
+    width: 100%; /* הגדלתי את הרוחב */
+    max-width: calc(100% - 2rem); /* מתאים את הרוחב המקסימלי כדי להתחשב באייקון */
+  }
+  
+  .beamBenefitsList li {
+    font-size: 0.9rem; /* הגדלתי את הגודל */
+    padding-right: 1.5rem;
+  }
+  
+  .beamBenefitsList li::before {
+    width: 0.7rem;
+    height: 0.7rem;
+    top: 0.45rem;
+  }
+  
+  .serviceButtonContainer {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%; /* מירכוז אופקי */
+    transform: translateX(-50%); /* מירכוז מושלם */
+    width: auto;
+    text-align: center;
+  }
+  
+  .additionalInfoContainer {
+    flex-direction: column-reverse;
+    padding: 1rem;
+  }
+  
+  .processImageContainer {
+    flex: none;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  .infoTitle {
+    font-size: 1.3rem; /* הגדלתי את הגודל */
+  }
+  
+  .additionalInfo p {
+    font-size: 0.95rem; /* הגדלתי את הגודל */
+  }
+}
+
+/* 350px-450px */
+@media (min-width: 350px) and (max-width: 450px) {
+  .servicesContainer {
+    padding: 1.2rem 0.6rem;
+  }
+  
+  .servicesTitle {
+    font-size: 1.9rem; /* הגדלתי את הגודל */
+  }
+  
+  .servicesSubtitle {
+    font-size: 1rem; /* הגדלתי את הגודל */
+  }
+  
+  .serviceHeader {
+    padding: 1rem;
+  }
+  
+  .serviceContent {
+    padding: 1.2rem;
+    padding-bottom: 4.5rem; /* הגדלנו כדי לוודא שיש מקום לכפתור */
+  }
+  
+  .serviceTitle {
+    font-size: 1.3rem; /* הגדלתי את הגודל */
+  }
+  
+  .serviceDetailLabel {
+    font-size: 0.95rem; /* הגדלתי את הגודל */
+  }
+  
+  .serviceDetailValue {
+    font-size: 0.95rem; /* הגדלתי את הגודל */
+    width: 100%; /* הגדלתי את הרוחב */
+  }
+  
+  .beamBenefitsList li {
+    font-size: 0.95rem; /* הגדלתי את הגודל */
+  }
+  
+  .serviceButtonContainer {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%; /* מירכוז אופקי */
+    transform: translateX(-50%); /* מירכוז מושלם */
+    width: auto;
+    text-align: center;
+  }
+  
+  .additionalInfoContainer {
+    flex-direction: column-reverse;
+    padding: 1.2rem;
+  }
+  
+  .processImageContainer {
+    flex: none;
+    width: 100%;
+    margin-bottom: 1.2rem;
+  }
+  
+  .infoTitle {
+    font-size: 1.4rem; /* הגדלתי את הגודל */
+  }
+  
+  .additionalInfo p {
+    font-size: 0.95rem; /* הגדלתי את הגודל */
+  }
+}
+
+/* 450px-550px */
+@media (min-width: 451px) and (max-width: 550px) {
+  .servicesContainer {
+    padding: 1.5rem 0.8rem;
+  }
+  
+  .servicesTitle {
+    font-size: 2rem; /* הגדלתי את הגודל */
+  }
+  
+  .servicesSubtitle {
+    font-size: 1.05rem; /* הגדלתי את הגודל */
+  }
+  
+  .serviceContent {
+    padding: 1.2rem;
+    padding-bottom: 4.5rem; /* הגדלנו כדי לוודא שיש מקום לכפתור */
+  }
+  
+  .serviceDetailLabel {
+    font-size: 0.95rem; /* הגדלתי את הגודל */
+  }
+  
+  .serviceDetailValue {
+    font-size: 0.95rem; /* הגדלתי את הגודל */
+    width: 100%; /* הגדלתי את הרוחב */
+  }
+  
+  .serviceButtonContainer {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%; /* מירכוז אופקי */
+    transform: translateX(-50%); /* מירכוז מושלם */
+    width: auto;
+    text-align: center;
+  }
+  
+  .additionalInfoContainer {
+    flex-direction: column-reverse;
+  }
+  
+  .processImageContainer {
+    flex: none;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    max-height: 250px;
+  }
+  
+  .additionalInfo p {
+    font-size: 1rem; /* הגדלתי את הגודל */
+  }
+}
+
+/* 550px-650px */
+@media (min-width: 551px) and (max-width: 650px) {
+  .servicesTitle {
+    font-size: 2.1rem; /* הגדלתי את הגודל */
+  }
+  
+  .servicesSubtitle {
+    font-size: 1.05rem; /* הגדלתי את הגודל */
+  }
+  
+  .serviceDetailValue {
+    max-width: 320px;
+    font-size: 0.95rem; /* הגדלתי את הגודל */
+  }
+  
+  .serviceButtonContainer {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%; /* מירכוז אופקי */
+    transform: translateX(-50%); /* מירכוז מושלם */
+    width: auto;
+    text-align: center;
+  }
+  
+  .additionalInfoContainer {
+    flex-direction: column-reverse;
+  }
+  
+  .processImageContainer {
+    flex: none;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    max-height: 280px;
+  }
+  
+  .additionalInfo p {
+    font-size: 1rem; /* הגדלתי את הגודל */
+  }
+}
+
+/* 650px-750px */
+@media (min-width: 651px) and (max-width: 750px) {
+  .servicesTitle {
+    font-size: 2rem;
+  }
+  
+  .servicesSubtitle {
+    font-size: 1.1rem; /* הגדלתי את הגודל */
+  }
+  
+  .serviceDetailLabel {
+    font-size: 0.95rem; /* הגדלתי את הגודל */
+  }
+  
+  .serviceDetailValue {
+    max-width: 380px;
+    font-size: 0.95rem; /* הגדלתי את הגודל */
+  }
+  
+  .additionalInfoContainer {
+    gap: 1.5rem;
+  }
+  
+  .processImageContainer {
+    flex: 0 0 220px;
+  }
+
+  .serviceButtonContainer {
+    left: 50%; /* מירכוז אופקי */
+    transform: translateX(-50%); /* מירכוז מושלם */
+    text-align: center;
+  }
+  
+  .additionalInfo p {
+    font-size: 1rem; /* הגדלתי את הגודל */
+  }
+}
+
+/* 750px-850px */
+@media (min-width: 751px) and (max-width: 850px) {
+  .serviceDetailLabel {
+    font-size: 0.95rem; /* הגדלתי את הגודל */
+  }
+  
+  .serviceDetailValue {
+    max-width: 440px;
+    font-size: 0.95rem; /* הגדלתי את הגודל */
+  }
+  
+  .processImageContainer {
+    flex: 0 0 240px;
+  }
+
+  .serviceButtonContainer {
+    left: 4.3rem; /* מיקום הכפתור */
+  }
+  
+  .additionalInfo p {
+    font-size: 1rem; /* הגדלתי את הגודל */
+  }
+}
+
+/* 850px-950px */
+@media (min-width: 851px) and (max-width: 950px) {
+  .serviceDetailValue {
+    max-width: 500px;
+    font-size: 0.95rem; /* הגדלתי את הגודל */
+  }
+  
+  .processImageContainer {
+    flex: 0 0 260px;
+  }
+
+  .serviceButtonContainer {
+    left: 4.4rem; /* מיקום הכפתור */
+  }
+  
+  .additionalInfo p {
+    font-size: 1rem; /* הגדלתי את הגודל */
+  }
+}
+
+/* 950px-1050px */
+@media (min-width: 951px) and (max-width: 1050px) {
+  .serviceDetailValue {
+    max-width: 540px;
+    font-size: 0.95rem; /* הגדלתי את הגודל */
+  }
+  
+  .processImageContainer {
+    flex: 0 0 280px;
+  }
+
+  .serviceButtonContainer {
+    left: 4.5rem; /* מיקום הכפתור */
+  }
+}
+
+/* 1050px-1150px */
+@media (min-width: 1051px) and (max-width: 1150px) {
+  .serviceDetailValue {
+    max-width: 560px;
+    font-size: 0.95rem; /* הגדלתי את הגודל */
+  }
+
+  .serviceButtonContainer {
+    left: 4.5rem; /* מיקום הכפתור */
+  }
+}
+
+/* 1150px-1250px */
+@media (min-width: 1151px) and (max-width: 1250px) {
+  .servicesContainer {
+    max-width: 1150px;
+  }
+  
+  .serviceCard {
+    max-width: 950px;
+  }
+  
+  .serviceDetailValue {
+    max-width: 580px;
+    font-size: 0.95rem; /* הגדלתי את הגודל */
+  }
+
+  .serviceButtonContainer {
+    left: 4.5rem; /* מיקום הכפתור */
+  }
+}
+
+/* תוספת של חלק שיקבע את מיקום הכפתור במסכים מעל 1250px */
+@media (min-width: 1251px) {
+  .serviceButtonContainer {
+    left: 4.5rem;
+  }
+}

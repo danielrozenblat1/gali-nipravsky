@@ -1,0 +1,78 @@
+.center {
+  display: flex;
+  justify-content: center;
+  margin: 2% auto;
+}
+
+.button {
+  min-width: 200px;  /* רוחב מינימלי לכפתור */
+  position: relative;
+  /* גרדיאנט בגווני פנינה ורודה מודגשים יותר */
+  background: linear-gradient(135deg, #ffdfea 0%, #ffe6ef 50%, #ffecf3 100%);
+  border: 1px solid rgba(246, 200, 220, 0.7);  /* בורדר בגוון ורוד מודגש יותר */
+  color: #775a64;  /* צבע טקסט בגוון ורוד-אפור */
+  padding: 16px 48px;  /* הרחבת הכפתור */
+  font-size: 1.15rem;
+  font-family: "AssistantR", sans-serif;
+  direction: rtl;
+  border-radius: 0.85rem;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 
+    0 10px 20px rgba(246, 190, 210, 0.25),  /* צל חיצוני עדין יותר בגוון ורוד */
+    0 4px 8px rgba(246, 190, 210, 0.15),
+    inset 0 0 10px rgba(244, 195, 215, 0.3),  /* צל פנימי בגוון ורוד מודגש */
+    inset 0 1px 3px rgba(244, 195, 215, 0.25),
+    inset 0 -2px 3px rgba(255, 245, 250, 0.8);
+}
+
+.button:hover {
+  /* אפקט מוגבר בעת ריחוף */
+  /* אפקט מוגבר עדין בעת ריחוף */
+  box-shadow: 
+    0 15px 25px rgba(246, 190, 210, 0.3),
+    0 6px 12px rgba(246, 190, 210, 0.2),
+    inset 0 0 15px rgba(244, 195, 215, 0.3),
+    inset 0 1px 4px rgba(244, 195, 215, 0.25),
+    inset 0 -2px 4px rgba(255, 245, 250, 0.9);
+}
+
+.button:active {
+  /* אפקט לחיצה */
+  transform: translateY(1px);
+  box-shadow: 
+    0 8px 16px rgba(246, 220, 230, 0.3),
+    0 3px 6px rgba(246, 220, 230, 0.15),
+    inset 0 0 18px rgba(244, 215, 225, 0.35),
+    inset 0 2px 5px rgba(244, 215, 225, 0.3);
+}
+
+/* אנימציית ברק בגוון פנינה ורודה */
+.shine {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 0%,
+    rgba(255, 245, 250, 0) 25%,
+    rgba(255, 245, 250, 0.5) 50%,
+    rgba(255, 245, 250, 0) 75%,
+    transparent 100%
+  );
+  transform: rotate(25deg);
+  animation: shine 8s infinite linear;
+  pointer-events: none;
+}
+
+@keyframes shine {
+  0% {
+    transform: translate(-100%, -100%) rotate(25deg);
+  }
+  100% {
+    transform: translate(100%, 100%) rotate(25deg);
+  }
+}

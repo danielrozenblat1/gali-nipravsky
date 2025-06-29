@@ -1,0 +1,938 @@
+/* Enhanced benefits with attention to detail for responsive design */
+@media screen and (max-width: 349px) {
+    .benefitItemNew::before,
+    .benefitItemNew::after {
+        height: 60%;
+        top: 20%;
+    }
+    
+    .benefitItemNew:hover::before {
+        height: 70%;
+        top: 15%;
+    }
+}/* Add subtle hover animation to benefits container children */
+.benefitsContainer:hover .benefitItemNew {
+    filter: brightness(0.95);
+    transition: all 0.5s ease;
+}
+
+.benefitsContainer .benefitItemNew:hover {
+    filter: brightness(1.05);
+    z-index: 1;
+}/* Base Container */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 2% auto;
+    overflow-x: hidden;
+    
+    padding: 2rem 0;
+    border-radius: 20px;
+}
+
+/* Base styles with shared properties */
+.introText, .goodNews, .notAlone, .title, .subtitleSmall, .description {
+    direction: rtl;
+    text-align: center;
+    line-height: 1.3;
+}
+
+.introText, .goodNews, .notAlone, .title, .subtitleSmall {
+    font-family: 'Assistant', sans-serif;
+}
+
+.description {
+    font-family: 'AssistantR', sans-serif;
+}
+
+/* Intro Section Styles */
+.introSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    direction: rtl;
+    text-align: center;
+    width: 100%;
+}
+
+.introBox {
+    position: relative;
+    padding: 1rem 2.5rem;
+    border-radius: 18px;
+    transition: all 0.4s ease;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.introBox:hover {
+    transform: translateY(-5px);
+}
+
+/* CSS for text transition effect */
+.textTransition {
+    font-size: 2.2rem;
+    font-family: 'Assistant', sans-serif;
+    background: linear-gradient(135deg, #ce277a 0%, #c15169 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.1));
+    margin: 0 auto;
+    white-space: nowrap;
+    display: block;
+    text-align: center;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    width: 100%;
+}
+
+.fadeIn {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.fadeOut {
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Concerns Container Styles */
+.concernsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.8rem;
+    margin: 2.5rem auto;
+    max-width: 1000px;
+    padding: 0 1rem;
+}
+
+/* NEW UPGRADED CONCERN ITEM STYLE WITH GLASS EFFECT */
+.concernItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    font-family: 'AssistantR', sans-serif;
+    font-size: 1.3rem;
+    color: #ce277a;
+    padding: 1.7rem 1.5rem;
+    border-radius: 24px;
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    direction: rtl;
+    position: relative;
+    overflow: hidden;
+    width: 150px;
+    height: auto;
+    text-align: center;
+    
+    /* Glass Effect - UPGRADED */
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 
+        0 10px 30px rgba(0, 0, 0, 0.05),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+}
+
+/* Subtle gradient overlay for depth */
+.concernItem::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        135deg, 
+        rgba(255, 228, 230, 0.2) 0%, 
+        rgba(255, 246, 246, 0.05) 50%,
+        rgba(255, 228, 230, 0.1) 100%
+    );
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: -1;
+    border-radius: 24px;
+}
+
+/* Subtle inner border/highlight effect */
+.concernItem::after {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.4) 0%,
+        rgba(255, 255, 255, 0.1) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    border-radius: 24px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+/* Hover effects */
+.concernItem:hover {
+    transform: translateY(-7px) scale(1.02);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 
+        0 15px 35px rgba(214, 123, 142, 0.1),
+        0 5px 15px rgba(0, 0, 0, 0.03),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+    color: rgba(214, 123, 142, 1);
+}
+
+.concernItem:hover::before {
+    opacity: 1;
+}
+
+.concernItem:hover::after {
+    opacity: 0.6;
+}
+
+/* Updated icon styling */
+.icon {
+    width: 38px !important;
+    height: 38px !important;
+    color: #d67b8e;
+    padding: 9px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    box-shadow: 
+        0 4px 12px rgba(214, 123, 142, 0.1),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    margin-bottom: 0.8rem;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.concernItem:hover .icon {
+    transform: scale(1.12) rotate(5deg);
+    color: #c45e75;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 
+        0 6px 16px rgba(214, 123, 142, 0.15),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+/* Benefits List Styles */
+.benefitsList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    margin: 2rem auto;
+    max-width: 800px;
+    padding: 0 1rem;
+    direction: rtl;
+}
+
+.benefitItem {
+    font-family: 'AssistantR', sans-serif;
+    font-size: 1.3rem;
+    color: #d67b8e;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(8px);
+    padding: 1rem 1.5rem;
+    border-radius: 14px;
+    width: 100%;
+    text-align: center;
+    transition: all 0.4s ease;
+    box-shadow: 
+        0 4px 15px rgba(252, 223, 228, 0.2),
+        inset 0 2px 8px rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.benefitItem:hover {
+    background: rgba(255, 240, 245, 0.8);
+    transform: translateY(-3px);
+    box-shadow: 
+        0 8px 20px rgba(252, 223, 228, 0.3),
+        inset 0 2px 12px rgba(255, 255, 255, 0.7);
+}
+
+/* Glass Benefits Container - NEW STYLE */
+.benefitsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.2rem;
+    margin: 2.5rem auto;
+    max-width: 1000px;
+    padding: 0 1rem;
+    direction: rtl;
+    position: relative;
+}
+
+/* Add subtle light accent behind benefits */
+.benefitsContainer::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    right: -10px;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(206, 39, 122, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+/* Add subtle accent on bottom left for balance */
+.benefitsContainer::after {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    left: -20px;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, rgba(214, 123, 142, 0.08) 0%, rgba(255, 255, 255, 0) 70%);
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.benefitItemNew {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    font-family: 'AssistantR', sans-serif;
+    font-size: 1.3rem;
+    color: #d67b8e;
+    padding: 1rem 1.2rem;
+    border-radius: 12px;
+    direction: rtl;
+    position: relative;
+    overflow: hidden;
+    
+    /* Glass Effect */
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    
+    /* Inner Shadow */
+    box-shadow: 
+        inset 0 2px 8px rgba(255, 255, 255, 0.6),
+        inset 0 -2px 5px rgba(0, 0, 0, 0.03),
+        0 4px 15px rgba(214, 123, 142, 0.15);
+    
+    width: 250px;
+    text-align: right;
+    
+    /* No border-right, using pseudo-elements instead */
+    border-right: 0;
+    transition: all 0.4s ease;
+}
+
+/* Glowing right border with double-layer effect */
+.benefitItemNew::before {
+    content: '';
+    position: absolute;
+    top: 15%;
+    right: 0;
+    height: 70%;
+    width: 3px;
+    background: linear-gradient(to bottom, 
+                rgba(206, 39, 122, 0.1) 0%, 
+                rgba(206, 39, 122, 0.7) 50%,
+                rgba(206, 39, 122, 0.1) 100%);
+    border-radius: 2px;
+    box-shadow: 0 0 5px rgba(206, 39, 122, 0.2);
+    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+/* Second layer of the border for depth effect */
+.benefitItemNew::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 4px;
+    background: linear-gradient(to bottom, 
+                rgba(206, 39, 122, 0.05) 0%, 
+                rgba(206, 39, 122, 0.2) 50%,
+                rgba(206, 39, 122, 0.05) 100%);
+    border-radius: 0 12px 12px 0;
+    opacity: 0.7;
+    transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+/* Add hover effect - enhanced */
+.benefitItemNew:hover {
+    transform: translateY(-3px);
+    box-shadow: 
+        inset 0 2px 8px rgba(255, 255, 255, 0.6),
+        inset 0 -2px 5px rgba(0, 0, 0, 0.03),
+        0 6px 18px rgba(214, 123, 142, 0.25);
+    background: rgba(255, 245, 250, 0.4);
+}
+
+/* Dramatic glow effect on hover */
+/* Add pulsing animation for accent effect */
+@keyframes borderPulse {
+    0% {
+        box-shadow: 
+            0 0 8px rgba(206, 39, 122, 0.3),
+            0 0 12px rgba(246, 79, 162, 0.1);
+    }
+    50% {
+        box-shadow: 
+            0 0 12px rgba(206, 39, 122, 0.5),
+            0 0 20px rgba(246, 79, 162, 0.2);
+    }
+    100% {
+        box-shadow: 
+            0 0 8px rgba(206, 39, 122, 0.3),
+            0 0 12px rgba(246, 79, 162, 0.1);
+    }
+}
+
+.benefitItemNew:hover::before {
+    height: 85%;
+    top: 7.5%;
+    width: 3.5px;
+    background: linear-gradient(to bottom, 
+                rgba(206, 39, 122, 0.3) 0%, 
+                rgba(246, 79, 162, 0.9) 50%,
+                rgba(206, 39, 122, 0.3) 100%);
+    box-shadow: 
+        0 0 10px rgba(206, 39, 122, 0.4),
+        0 0 20px rgba(246, 79, 162, 0.2);
+    animation: borderPulse 2s infinite ease-in-out;
+}
+
+.benefitItemNew:hover::after {
+    opacity: 0.9;
+    width: 4.5px;
+    background: linear-gradient(to bottom, 
+                rgba(206, 39, 122, 0.1) 0%, 
+                rgba(206, 39, 122, 0.3) 50%,
+                rgba(206, 39, 122, 0.1) 100%);
+}
+
+.benefitIcon {
+    min-width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #d67b8e;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 
+        inset 0 2px 6px rgba(255, 255, 255, 0.6),
+        0 3px 8px rgba(214, 123, 142, 0.15);
+    transition: all 0.3s ease;
+}
+
+.benefitItemNew:hover .benefitIcon {
+    color: #ce277a;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 
+        inset 0 2px 6px rgba(255, 255, 255, 0.8),
+        0 3px 10px rgba(206, 39, 122, 0.2);
+    transform: scale(1.05) rotate(5deg);
+}
+
+.benefitText {
+    font-family: 'AssistantR', sans-serif;
+    font-size: 1.1rem;
+    color: #c45e75;
+    line-height: 1.4;
+    position: relative;
+    flex: 1;
+    text-align: right;
+    transition: all 0.3s ease;
+}
+
+.benefitItemNew:hover .benefitText {
+    color: #ce277a;
+}
+
+/* Row Styles */
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 2% auto;
+    width: 100%;
+    max-width: 1000px;
+    gap: 1.2rem;
+    padding: 0 1rem;
+}
+
+/* Description Styles */
+.description {
+    font-size: 1.4rem;
+    margin: 2rem auto;
+    max-width: 800px;
+    font-family: "AssistantR";
+    line-height: 1.6;
+    padding: 1.5rem 2rem;
+    color: #b46f81;
+    border-radius: 16px;
+}
+
+.goodNews {
+    font-size: 2.3rem;
+    color: #c45e75;
+    margin: 2.5rem auto 1rem;
+    font-weight: 500;
+    text-shadow: 2px 2px 4px rgba(214, 123, 142, 0.1);
+    padding: 0 1rem;
+}
+
+.notAlone {
+    font-size: 1.5rem;
+    background: linear-gradient(135deg, #e2a9b3 30%, #c45e75 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 2% auto;
+    position: relative;
+    filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.1));
+    padding: 0 1rem;
+}
+
+.title {
+    font-size: 2.5rem;
+    margin: 2% auto;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    background: linear-gradient(135deg, #e2a9b3 30%, #c45e75 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    padding: 0 1rem;
+}
+
+.subtitleSmall {
+    font-size: 2rem;
+    margin: 2% auto;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    background: linear-gradient(135deg, #e2a9b3 30%, #c45e75 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    filter: drop-shadow(2px 2px 4px rgba(214, 123, 142, 0.2));
+    padding: 0 1rem;
+}
+
+.title::after, .subtitleSmall::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #d67b8e 50%, transparent);
+}
+
+.subtitleSmall::after {
+    width: 100px;
+    height: 1.5px;
+    bottom: -8px;
+}
+
+/* Responsive Media Queries */
+
+/* Below 350px */
+@media screen and (max-width: 349px) {
+    .container {
+        margin: 1% auto;
+        padding: 1rem 0;
+        border-radius: 15px;
+    }
+    
+    .textTransition {
+        font-size: 1.4rem;
+        white-space: normal;
+        text-align: center;
+        margin: 0 auto;
+    }
+    
+    .introBox {
+        padding: 0.7rem 1.2rem;
+    }
+    
+    .concernsContainer {
+        gap: 1rem;
+        margin: 1.5rem auto;
+    }
+    
+    .concernItem {
+        width: 120px;
+        font-size: 1rem;
+        padding: 1.2rem 1rem;
+    }
+    
+    .icon {
+        width: 30px !important;
+        height: 30px !important;
+        padding: 6px;
+    }
+    
+    .benefitItemNew {
+        width: 100%;
+        font-size: 1rem;
+    }
+    
+    .benefitIcon {
+        min-width: 30px;
+        height: 30px;
+    }
+    
+    .benefitText {
+        font-size: 0.9rem;
+    }
+    
+    .description {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+    
+    .goodNews {
+        font-size: 1.5rem;
+    }
+    
+    .notAlone {
+        font-size: 1rem;
+    }
+    
+    .title {
+        font-size: 1.6rem;
+    }
+    
+    .subtitleSmall {
+        font-size: 1.3rem;
+    }
+    
+    .title::after {
+        width: 80px;
+        bottom: -8px;
+    }
+    
+    .subtitleSmall::after {
+        width: 70px;
+        bottom: -6px;
+    }
+}
+
+/* 350px - 450px */
+@media screen and (min-width: 350px) and (max-width: 450px) {
+    .container {
+        margin: 1.5% auto;
+        padding: 1.2rem 0;
+        border-radius: 16px;
+    }
+    
+    .textTransition {
+        font-size: 1.6rem;
+        white-space: normal;
+        text-align: center;
+        margin: 0 auto;
+    }
+    
+    .introBox {
+        padding: 0.8rem 1.5rem;
+    }
+    
+    .concernsContainer {
+        gap: 1.2rem;
+        margin: 1.8rem auto;
+    }
+    
+    .concernItem {
+        width: 130px;
+        font-size: 1.1rem;
+        padding: 1.4rem 1.2rem;
+    }
+    
+    .icon {
+        width: 32px !important;
+        height: 32px !important;
+        padding: 7px;
+    }
+    
+    .benefitItemNew {
+        width: 100%;
+        font-size: 1.1rem;
+    }
+    
+    .benefitIcon {
+        min-width: 34px;
+        height: 34px;
+    }
+    
+    .benefitText {
+        font-size: 1rem;
+    }
+    
+    .description {
+        font-size: 1.1rem;
+        padding: 1.2rem 1.5rem;
+    }
+    
+    .goodNews {
+        font-size: 1.7rem;
+    }
+    
+    .notAlone {
+        font-size: 1.1rem;
+    }
+    
+    .title {
+        font-size: 1.8rem;
+    }
+    
+    .subtitleSmall {
+        font-size: 1.5rem;
+    }
+    
+    .title::after {
+        width: 90px;
+        bottom: -8px;
+    }
+    
+    .subtitleSmall::after {
+        width: 75px;
+        bottom: -7px;
+    }
+}
+
+/* 450px - 550px */
+@media screen and (min-width: 451px) and (max-width: 550px) {
+    .container {
+        margin: 1.5% auto;
+        padding: 1.3rem 0;
+    }
+    
+    .textTransition {
+        font-size: 1.8rem;
+    }
+    
+    .introBox {
+        padding: 0.9rem 1.8rem;
+    }
+    
+    .concernsContainer {
+        gap: 1.4rem;
+        margin: 2rem auto;
+    }
+    
+    .concernItem {
+        width: 135px;
+        font-size: 1.15rem;
+    }
+    
+    .icon {
+        width: 34px !important;
+        height: 34px !important;
+        padding: 8px;
+    }
+    
+    .benefitItemNew {
+        width: 100%;
+        font-size: 1.15rem;
+    }
+    
+    .benefitIcon {
+        min-width: 36px;
+        height: 36px;
+    }
+    
+    .benefitText {
+        font-size: 1.05rem;
+    }
+    
+    .description {
+        font-size: 1.2rem;
+        padding: 1.3rem 1.6rem;
+    }
+    
+    .goodNews {
+        font-size: 1.9rem;
+    }
+    
+    .notAlone {
+        font-size: 1.2rem;
+    }
+    
+    .title {
+        font-size: 2rem;
+    }
+    
+    .subtitleSmall {
+        font-size: 1.6rem;
+    }
+}
+
+/* 550px - 650px */
+@media screen and (min-width: 551px) and (max-width: 650px) {
+    .container {
+        padding: 1.5rem 0;
+    }
+    
+    .textTransition {
+        font-size: 1.9rem;
+    }
+    
+    .introBox {
+        padding: 1rem 2rem;
+    }
+    
+    .concernItem {
+        width: 140px;
+        font-size: 1.2rem;
+    }
+    
+    .benefitItemNew {
+        width: 100%;
+        font-size: 1.2rem;
+    }
+    
+    .description {
+        font-size: 1.25rem;
+    }
+    
+    .goodNews {
+        font-size: 2rem;
+    }
+    
+    .notAlone {
+        font-size: 1.3rem;
+    }
+    
+    .title {
+        font-size: 2.1rem;
+    }
+    
+    .subtitleSmall {
+        font-size: 1.7rem;
+    }
+}
+
+/* 650px - 750px */
+@media screen and (min-width: 651px) and (max-width: 750px) {
+    .textTransition {
+        font-size: 2rem;
+    }
+    
+    .concernItem {
+        width: 145px;
+        font-size: 1.25rem;
+    }
+    
+    .benefitItemNew {
+        width: 48%;
+    }
+    
+    .description {
+        font-size: 1.3rem;
+    }
+    
+    .goodNews {
+        font-size: 2.1rem;
+    }
+    
+    .title {
+        font-size: 2.2rem;
+    }
+    
+    .subtitleSmall {
+        font-size: 1.8rem;
+    }
+}
+
+/* 750px - 850px */
+@media screen and (min-width: 751px) and (max-width: 850px) {
+    .textTransition {
+        font-size: 2.1rem;
+    }
+    
+    .concernItem {
+        width: 145px;
+    }
+    
+    .benefitItemNew {
+        width: 47%;
+    }
+    
+    .description {
+        font-size: 1.35rem;
+    }
+    
+    .goodNews {
+        font-size: 2.2rem;
+    }
+    
+    .title {
+        font-size: 2.3rem;
+    }
+    
+    .subtitleSmall {
+        font-size: 1.9rem;
+    }
+}
+
+/* 850px - 950px */
+@media screen and (min-width: 851px) and (max-width: 950px) {
+    .concernItem {
+        width: 148px;
+    }
+    
+    .benefitItemNew {
+        width: 45%;
+    }
+}
+
+/* 950px - 1050px */
+@media screen and (min-width: 951px) and (max-width: 1050px) {
+    .benefitItemNew {
+        width: 30%;
+    }
+}
+
+/* 1050px - 1150px */
+@media screen and (min-width: 1051px) and (max-width: 1150px) {
+    .benefitItemNew {
+        width: 30%;
+    }
+}
+
+/* 1150px - 1250px */
+@media screen and (min-width: 1151px) and (max-width: 1250px) {
+    .benefitItemNew {
+        width: 30%;
+    }
+}

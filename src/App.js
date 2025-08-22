@@ -10,6 +10,7 @@ import BeforeAfter from './components/recommends/BeforeAfter';
 import NavBarNew from './components/CourseNav/NavBarNew';
 import ForthScreen from './screens/ForthScreen';
 import FifthScreen from './screens/FifthScreen';
+import PrivacyPolicy from './privacy/Privacy';
 
 function App() {
   return <>
@@ -22,6 +23,12 @@ function App() {
   <ThirdScreen/>
 <ForthScreen/>
 <FifthScreen/>
+<PrivacyPolicy 
+  ownerName="גלי ניפרבסקי" 
+  email="Galgal532@gmail.com" 
+  phone="+972 52-480-1251" 
+  domain="https://gali-lashes-artface.co.il/" 
+/>
   <ByMe/>
    </>
 

@@ -469,7 +469,10 @@
   transform: scale(1.02);
   box-shadow: 0 15px 30px rgba(219, 112, 147, 0.25);
 }
-
+.center{
+  display: flex;
+  margin:0 auto
+}
 .video {
   aspect-ratio: 16/9;
   width: 100%;

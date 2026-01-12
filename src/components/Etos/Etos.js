@@ -3,6 +3,7 @@ import styles from './Etos.module.css';
 import milon from "../../images/מילון היופי.png";
 import margishot from "../../images/מרגישות יופי.png";
 import Button from '../WaButton/Button';
+import ContactForm from '../lightForm/Form';
 
 const Etos = () => {
   const [activeVideo, setActiveVideo] = useState(0);
@@ -154,7 +155,13 @@ const Etos = () => {
       </main>
 
     </div>
-    <Button text="גלי, בואי נדבר!"/>
+    <div className={styles.center}>
+    <div className={styles.description} style={{textAlign:"center", margin:'0 auto', display:"flex", justifyContent:"center"}}>
+  הצעד הראשון למראה שתמיד חלמת עליו מתחיל כאן! אני מחכה לך לחוות דעת מקצועית בשיחת ייעוץ אישית – ללא עלות וללא התחייבות.
+</div>
+        </div>  
+    <ContactForm/>
+  
 </>
 };
 

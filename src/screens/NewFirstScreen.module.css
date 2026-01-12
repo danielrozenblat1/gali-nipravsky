@@ -1,0 +1,664 @@
+/* CSS לגלי ניפרבסקי - First Screen */
+/* אסתטיקה ורודה-רכה עם אלמנטים זכוכיתיים */
+
+.heroContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+
+  position: relative;
+}
+
+.contentWrapper {
+  display: flex;
+  margin-top: 2%;
+  flex-direction: row;
+  min-height: 60vh;
+  width: 100%;
+  overflow-x: hidden;
+  justify-content: center;
+}
+
+/* אזור התוכן */
+.contentSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  text-align: center;
+  direction: rtl;
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.bgBlur {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-20px) scale(1.05);
+  }
+}
+
+.textContent {
+  width: 100%;
+  max-width: 1100px;
+  padding: 40px 20px;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  margin: 0 auto;
+  box-sizing: border-box;
+  
+  /* Glass effect */
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 
+    0 8px 32px rgba(206, 39, 122, 0.08),
+    inset 0 2px 8px rgba(255, 255, 255, 0.8);
+}
+
+/* כותרת משנית */
+.descriptionB {
+  font-family: 'AssistantR', sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+  color: #d67b8e;
+  text-shadow: 0 2px 4px rgba(214, 123, 142, 0.1);
+  position: relative;
+  text-align: center;
+}
+
+/* כותרת ראשית */
+.title {
+  font-family: 'Assistant', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.5px;
+  background: linear-gradient(135deg, #ce277a 0%, #c45e75 50%, #d67b8e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  text-shadow: none;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  filter: drop-shadow(2px 2px 4px rgba(206, 39, 122, 0.15));
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #ce277a 50%, transparent);
+  border-radius: 2px;
+}
+
+/* ===== סטיילים לסרטון ===== */
+.videoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 10px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto 30px;
+  position: relative;
+  z-index: 1;
+  animation: fadeInUp 0.6s ease-out;
+  box-sizing: border-box;
+}
+
+.videoPlayer {
+  position: relative;
+  width: 100%;
+  max-width: 850px;
+  aspect-ratio: 16/9;
+  background: linear-gradient(135deg, #fdf0f3 0%, #ffe4ec 100%);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 
+    0 12px 40px rgba(206, 39, 122, 0.15),
+    0 4px 16px rgba(214, 123, 142, 0.1),
+    inset 0 2px 8px rgba(255, 255, 255, 0.6);
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s ease;
+  margin: 0 auto;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.videoPlayer:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 
+    0 20px 60px rgba(206, 39, 122, 0.2),
+    0 8px 24px rgba(214, 123, 142, 0.15),
+    inset 0 2px 8px rgba(255, 255, 255, 0.8);
+}
+
+.thumbnailWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 22px;
+}
+
+.playButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(135deg, #ce277a 0%, #d67b8e 100%);
+  border: none;
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 
+    0 8px 30px rgba(206, 39, 122, 0.4),
+    inset 0 2px 8px rgba(255, 255, 255, 0.3);
+}
+
+.playButton:hover {
+  background: linear-gradient(135deg, #d63384 0%, #ce277a 100%);
+  transform: translate(-50%, -50%) scale(1.12);
+  box-shadow: 
+    0 12px 40px rgba(206, 39, 122, 0.5),
+    inset 0 2px 8px rgba(255, 255, 255, 0.4);
+}
+
+.playButton svg {
+  margin-left: 5px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.vimeoPlayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 22px;
+}
+
+/* אזור הטופס */
+.formSection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0 10px 60px 10px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========== RESPONSIVE MEDIA QUERIES ========== */
+
+/* Below 1250px */
+@media screen and (max-width: 1250px) {
+  .contentWrapper {
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+    overflow: visible;
+    margin-top: 0;
+  }
+  
+  .contentSection {
+    z-index: 2;
+    margin: 0 auto;
+  }
+  
+  .blurCircle2 {
+    width: 500px;
+    height: 350px;
+    left: -120px;
+    bottom: -180px;
+    filter: blur(80px);
+  }
+  
+  .textContent {
+    z-index: 3;
+    padding: 35px 20px;
+    margin: 0 auto 20px;
+    border-radius: 25px;
+  }
+  
+  .title {
+    font-size: 2.4rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .title::after {
+    width: 120px;
+    bottom: -8px;
+  }
+  
+  .descriptionB {
+    font-size: 1.4rem;
+  }
+  
+  .videoContainer {
+    padding: 20px 15px;
+    margin: 0 auto 25px;
+  }
+  
+  .videoPlayer {
+    max-width: 750px;
+    border-radius: 20px;
+    margin: 0 auto;
+  }
+  
+  .vimeoPlayer,
+  .thumbnail {
+    border-radius: 18px;
+  }
+  
+  .playButton {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .playButton svg {
+    width: 44px;
+    height: 44px;
+  }
+  
+  .formSection {
+    padding: 0 15px 50px 15px;
+    max-width: 1400px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+}
+
+/* 850px - 950px */
+@media screen and (max-width: 950px) {
+  .contentWrapper {
+    align-items: center;
+    justify-content: center;
+    padding-top: 1.5rem;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  
+  .contentSection {
+    flex: none;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  .textContent {
+    max-width: 100%;
+    width: 95%;
+    padding: 30px 15px;
+    text-align: center;
+    margin: 0 auto 15px;
+    border-radius: 22px;
+  }
+  
+  .title {
+    text-align: center;
+    margin-bottom: 1.2rem;
+    font-size: 2rem;
+  }
+  
+  .title::after {
+    width: 100px;
+  }
+  
+  .descriptionB {
+    font-size: 1.3rem;
+  }
+  
+  .videoContainer {
+    padding: 15px 12px;
+    margin: 0 auto 20px;
+  }
+  
+  .videoPlayer {
+    max-width: 100%;
+    border-radius: 18px;
+    margin: 0 auto;
+  }
+  
+  .vimeoPlayer,
+  .thumbnail {
+    border-radius: 16px;
+  }
+  
+  .playButton {
+    width: 75px;
+    height: 75px;
+  }
+  
+  .playButton svg {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .formSection {
+    padding: 0 12px 40px 12px;
+  }
+}
+
+/* 750px - 850px */
+@media screen and (max-width: 850px) {
+  .title {
+    font-size: 1.85rem;
+  }
+  
+  .textContent {
+    padding: 25px 12px;
+    width: 94%;
+  }
+  
+  .formSection {
+    padding: 0 10px 35px 10px;
+  }
+  
+  .blurCircle1 {
+    width: 350px;
+    height: 350px;
+  }
+  
+  .blurCircle2 {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+/* 650px - 750px */
+@media screen and (max-width: 750px) {
+  .heroContainer {
+    padding-top: 2vh;
+  }
+  
+  .contentWrapper {
+    padding-top: 1rem;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  .title {
+    font-size: 1.7rem;
+  }
+  
+  .title::after {
+    width: 90px;
+    height: 2px;
+  }
+  
+  .descriptionB {
+    font-size: 1.2rem;
+  }
+  
+  .videoContainer {
+    padding: 12px 10px;
+    margin: 0 auto 18px;
+  }
+  
+  .playButton {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .playButton svg {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .formSection {
+    padding: 0 10px 35px 10px;
+  }
+}
+
+/* 550px - 650px */
+@media screen and (max-width: 650px) {
+  .title {
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+  }
+  
+  .textContent {
+    padding: 20px 10px;
+    width: 92%;
+    border-radius: 18px;
+  }
+  
+  .descriptionB {
+    font-size: 1.15rem;
+  }
+  
+  .formSection {
+    padding: 0 8px 30px 8px;
+  }
+  
+  .videoPlayer {
+    border-radius: 14px;
+  }
+  
+  .vimeoPlayer,
+  .thumbnail {
+    border-radius: 12px;
+  }
+}
+
+/* 450px - 550px */
+@media screen and (max-width: 550px) {
+  .heroContainer {
+    padding-top: 1vh;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+    margin: 8px auto 15px;
+  }
+  
+  .title::after {
+    width: 80px;
+    bottom: -6px;
+  }
+  
+  .descriptionB {
+    font-size: 1.1rem;
+  }
+  
+  .textContent {
+    padding: 18px 8px;
+    margin: 0 auto 10px;
+    width: 90%;
+    border-radius: 16px;
+  }
+  
+  .videoContainer {
+    padding: 10px 8px;
+    margin: 0 auto 12px;
+  }
+  
+  .contentSection {
+    margin: 0 auto;
+  }
+  
+  .videoPlayer {
+    border-radius: 12px;
+    margin: 0 auto;
+  }
+  
+  .vimeoPlayer,
+  .thumbnail {
+    border-radius: 10px;
+  }
+  
+  .playButton {
+    width: 65px;
+    height: 65px;
+  }
+  
+  .playButton svg {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .formSection {
+    padding: 0 8px 35px 8px;
+  }
+  
+  .blurCircle1 {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .blurCircle2 {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .blurCircle3 {
+    display: none;
+  }
+}
+
+/* 350px - 450px */
+@media screen and (max-width: 450px) {
+  .title {
+    font-size: 1.4rem;
+  }
+  
+  .title::after {
+    width: 70px;
+  }
+  
+  .descriptionB {
+    font-size: 1.05rem;
+  }
+  
+  .textContent {
+    padding: 15px 6px;
+    width: 88%;
+    border-radius: 14px;
+  }
+  
+  .playButton {
+    width: 58px;
+    height: 58px;
+  }
+  
+  .playButton svg {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .formSection {
+    padding: 0 6px 30px 6px;
+  }
+  
+  .videoPlayer {
+    border-radius: 10px;
+  }
+  
+  .vimeoPlayer,
+  .thumbnail {
+    border-radius: 8px;
+  }
+}
+
+/* Below 350px */
+@media screen and (max-width: 350px) {
+  .title {
+    font-size: 1.25rem;
+  }
+  
+  .title::after {
+    width: 60px;
+    height: 2px;
+  }
+  
+  .descriptionB {
+    font-size: 1rem;
+  }
+  
+  .textContent {
+    padding: 12px 5px;
+    width: 86%;
+    border-radius: 12px;
+  }
+  
+  .playButton {
+    width: 52px;
+    height: 52px;
+  }
+  
+  .playButton svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .formSection {
+    padding: 0 5px 25px 5px;
+  }
+  
+  .videoPlayer {
+    border-radius: 8px;
+  }
+  
+  .vimeoPlayer,
+  .thumbnail {
+    border-radius: 6px;
+  }
+}

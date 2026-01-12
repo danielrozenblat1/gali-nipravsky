@@ -11,18 +11,21 @@ import NavBarNew from './components/CourseNav/NavBarNew';
 import ForthScreen from './screens/ForthScreen';
 import FifthScreen from './screens/FifthScreen';
 import PrivacyPolicy from './privacy/Privacy';
+import HeroSection from './screens/NewFirstScreen';
 
 function App() {
   return <>
   <NavBarNew/>
-   <FirstScreen/>
-   <LaserRemovalScreen/>
+   {/* <FirstScreen/> */}
+   <HeroSection/>
+   {/* <LaserRemovalScreen/> */}
 
-   <AboutMe/>
-   <Etos/>
+
   <ThirdScreen/>
-<ForthScreen/>
-<FifthScreen/>
+     <AboutMe/>
+   <Etos/>
+{/* <ForthScreen/> */}
+{/* <FifthScreen/> */}
 <PrivacyPolicy 
   ownerName="גלי ניפרבסקי" 
   email="Galgal532@gmail.com" 

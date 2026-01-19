@@ -3,33 +3,28 @@ import styles from './Recommends.module.css';
 import Button from "../../components/WaButton/Button"
 
 // Import your images
-import result1 from "../../images/גלי ניפרבסקי איפור קבוע בשפתיים 1.png";
-import result2 from "../../images/גלי ניפרבסקי איפור קבוע בשפתיים 2.png";
-import result3 from "../../images/גלי ניפרבסקי איפור קבוע בשפתיים 3.png";
-import result4 from "../../images/גלי ניפרבסקי איפור קבוע בשפתיים 4.png";
-import result5 from "../../images/גלי ניפרבסקי איפור קבוע בשפתיים 5.png";
-import result6 from "../../images/גלי ניפרבסקי איפור קבוע בשפתיים 6.png";
-import result7 from "../../images/גלי ניפרבסקי איפור קבוע בשפתיים 7.png";
-import result8 from "../../images/גלי ניפרבסקי איפור קבוע בשפתיים 8.png";
-import result9 from "../../images/גלי ניפרבסקי איפור קבוע בשפתיים 9.png";
-import result10 from "../../images/גלי ניפרבסקי איפור קבוע בשפתיים 10.png";
-import result11 from "../../images/גלי ניפרבסקי איפור קבוע בשפתיים 11.png";
-import result12 from "../../images/גלי ניפרבסקי איפור קבוע בשפתיים 12.png";
-import result13 from "../../images/גלי ניפרבסקי איפור קבוע בשפתיים 13.png";
-import result14 from "../../images/גלי ניפרבסקי איפור קבוע בשפתיים 14.png";
-import result15 from "../../images/גלי ניפרבסקי איפור קבוע בשפתיים 15.png";
-import result16 from "../../images/גלי ניפרבסקי איפור קבוע בשפתיים 16.png";
-import result17 from "../../images/גלי ניפרבסקי איפור קבוע בשפתיים 17.png";
-import result18 from "../../images/גלי ניפרבסקי איפור קבוע בשפתיים 18.png";
-import result19 from "../../images/גלי ניפרבסקי איפור קבוע בשפתיים 19.png";
-import result20 from "../../images/גלי ניפרבסקי איפור קבוע בשפתיים 20.png";
-import result21 from "../../images/גלי ניפרבסקי איפור קבוע בשפתיים 21.png";
+import result1 from "../../images/גלי איפור קבוע 1.jpg";
+import result2 from "../../images/גלי איפור קבוע 2.jpg";
+import result3 from "../../images/גלי איפור קבוע 3.jpg";
+import result4 from "../../images/גלי איפור קבוע 4.jpg";
+import result5 from "../../images/גלי איפור קבוע 5.jpg";
+import result6 from "../../images/גלי איפור קבוע 6.jpg";
+import result7 from "../../images/גלי איפור קבוע 7.jpg";
+import result8 from "../../images/גלי איפור קבוע 8.jpg";
+import result9 from "../../images/גלי איפור קבוע 9.jpg";
+import result10 from "../../images/גלי איפור קבוע 10.jpg";
+import result11 from "../../images/גלי איפור קבוע 11.jpg";
+import result12 from "../../images/גלי איפור קבוע 12.jpg";
+import result13 from "../../images/גלי איפור קבוע 13.jpg";
+import result14 from "../../images/גלי איפור קבוע 14.jpg";
+import result15 from "../../images/גלי איפור קבוע 15.jpg";
+
 
 const Works = () => {
   const images = [
-    result1, result2, result3, result4, 
-    result5, result6, result7, result8, result9,    result10, result11, result12, result13, 
-    result14, result15, result16, result17, result18, result19, result20, result21
+    result1, result2, , 
+    result5, result6, result7, result8,
+ result15
   ];
 
   return (

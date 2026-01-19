@@ -3,24 +3,25 @@ import styles from './WorksBrows.module.css';
 import Button from "../../components/WaButton/Button"
 
 // Import your images
-import result1 from "../../images/גלי ניפרבסקי איפור קבוע לגבות 1.png";
-import result2 from "../../images/גלי ניפרבסקי איפור קבוע לגבות 2.png";
-import result3 from "../../images/גלי ניפרבסקי איפור קבוע לגבות 3.png";
-import result4 from "../../images/גלי ניפרבסקי איפור קבוע לגבות 4.png";
-import result5 from "../../images/גלי ניפרבסקי איפור קבוע לגבות 5.png";
-import result6 from "../../images/גלי ניפרבסקי איפור קבוע לגבות 6.png";
-import result7 from "../../images/גלי ניפרבסקי איפור קבוע לגבות 7.png";
-import result8 from "../../images/גלי ניפרבסקי איפור קבוע לגבות 8.png";
-import result9 from "../../images/גלי ניפרבסקי איפור קבוע לגבות 9.png";
-import result10 from "../../images/גלי ניפרבסקי איפור קבוע לגבות 10.png";
-import result11 from "../../images/גלי ניפרבסקי איפור קבוע לגבות 11.png";
-import result12 from "../../images/גלי ניפרבסקי איפור קבוע לגבות 12.png";
-import result13 from "../../images/גלי ניפרבסקי איפור קבוע לגבות 13.png";
-
+import result1 from "../../images/גלי איפור קבוע 1.jpg";
+import result2 from "../../images/גלי איפור קבוע 2.jpg";
+import result3 from "../../images/גלי איפור קבוע 3.jpg";
+import result4 from "../../images/גלי איפור קבוע 4.jpg";
+import result5 from "../../images/גלי איפור קבוע 5.jpg";
+import result6 from "../../images/גלי איפור קבוע 6.jpg";
+import result7 from "../../images/גלי איפור קבוע 7.jpg";
+import result8 from "../../images/גלי איפור קבוע 8.jpg";
+import result9 from "../../images/גלי איפור קבוע 9.jpg";
+import result10 from "../../images/גלי איפור קבוע 10.jpg";
+import result11 from "../../images/גלי איפור קבוע 11.jpg";
+import result12 from "../../images/גלי איפור קבוע 12.jpg";
+import result13 from "../../images/גלי איפור קבוע 13.jpg";
+import result14 from "../../images/גלי איפור קבוע 14.jpg";
+import result15 from "../../images/גלי איפור קבוע 15.jpg";
 const WorksBrows = () => {
   const images = [
-    result1, result2, result3, result4, 
-    result5, result6, result7, result8, result9,    result10, result11, result12, result13, 
+    result3, result4, 
+  result9,    result10, result11, result12, result13,  result14, 
   
   ];
 

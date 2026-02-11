@@ -23,7 +23,7 @@ const HeroSection = () => {
             <div className={styles.videoPlayer}>
               <iframe
                 className={styles.vimeoPlayer}
-                src="https://player.vimeo.com/video/1153513147?autoplay=1&muted=1&title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479"
+                src="https://player.vimeo.com/video/1163277373?autoplay=1&muted=1&title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479"
                 title="סרטון איפור קבוע"
                 frameBorder="0"
                 allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"

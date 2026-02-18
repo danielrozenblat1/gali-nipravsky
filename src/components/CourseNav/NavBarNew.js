@@ -40,11 +40,11 @@ const NavBarNew = () => {
   };
 
   const handleWhatsAppClick = () => {
-    const phoneNumber = "+972524801251";
-    const message = "היי גלי ,אני רוצה לשמוע ממך עוד על..";
-    const encodedMessage = encodeURIComponent(message);
-    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-    window.open(whatsappURL, "_blank");
+    const formElement = document.getElementById('טופס');
+    if (formElement) {
+      const y = formElement.getBoundingClientRect().top + window.pageYOffset - 150;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
   };
 
   return (

@@ -139,7 +139,7 @@ const ContactForm = () => {
         </div>
 
         <button type="submit" className={styles.submitButton} disabled={isSubmitting || submitted}>
-          {isSubmitting ? 'שולח...' : submitted ? 'נשלח בהצלחה!' : 'שלח'}
+          {isSubmitting ? 'שולח...' : submitted ? 'נשלח בהצלחה!' : 'לקביעת ייעוץ והדמיה בקליניקה בבאר שבע לחצי כאן'}
         </button>
       </form>
 

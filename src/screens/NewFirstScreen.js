@@ -32,6 +32,7 @@ const HeroSection = () => {
             </div>
           </div>
 
+          <div id="shapo-widget-39723373db6e4d029b98" style={{width: '100%', display: 'flex', justifyContent: 'center'}}></div>
           <div className={styles.formSection}>
             <ContactForm/>
           </div>

@@ -12,6 +12,7 @@ const ContactForm = () => {
   // Refs for form fields
   const nameRef = useRef(null);
   const phoneRef = useRef(null);
+  const cityRef = useRef(null);
 
   // Server settings
   const serverUrl = "https://dynamic-server-dfc88e1f1c54.herokuapp.com/leads/newLead";
@@ -35,14 +36,15 @@ const ContactForm = () => {
     
     const name = nameRef.current.value;
     const phone = phoneRef.current.value;
-    
+    const city = cityRef.current.value;
+
     setIsSubmitting(true);
-    
+
     // Server data object
     const serverData = {
       name: name,
       phone: phone,
-      email: '',
+      email: city ? "עיר: " + city : '',
       reciver: reciver
     };
 
@@ -67,6 +69,7 @@ const ContactForm = () => {
         setTimeout(() => {
           nameRef.current.value = "";
           phoneRef.current.value = "";
+          cityRef.current.value = "";
           setSubmitted(false);
           setAgreed(false);
         }, 3000);
@@ -82,7 +85,10 @@ const ContactForm = () => {
 
   return (
     <div className={styles.formContainer} id="טופס">
-      <h2 className={styles.title}>השאירי פרטים לשיחת היכרות ללא עלות</h2>
+      <h2 className={styles.title}>
+        לקביעת ייעוץ והדמיה <span className={styles.highlight}>ללא עלות</span><br/><span className={styles.highlight}>בקליניקה בבאר שבע</span>
+      </h2>
+      <p className={styles.subtitle}>הכניסי את הפרטים שלך כאן:</p>
       <form className={styles.form} onSubmit={handleSubmit}>
         <input
           type="text"
@@ -98,6 +104,12 @@ const ContactForm = () => {
           className={styles.phoneInput}
           ref={phoneRef}
           required
+        />
+        <input
+          type="text"
+          name="city"
+          placeholder="עיר"
+          ref={cityRef}
         />
 
         {/* תיבת האישור למדיניות הפרטיות */}
@@ -139,7 +151,7 @@ const ContactForm = () => {
         </div>
 
         <button type="submit" className={styles.submitButton} disabled={isSubmitting || submitted}>
-          {isSubmitting ? 'שולח...' : submitted ? 'נשלח בהצלחה!' : 'לקביעת ייעוץ והדמיה בקליניקה בבאר שבע לחצי כאן'}
+          {isSubmitting ? 'שולח...' : submitted ? 'נשלח בהצלחה!' : 'לקביעת ייעוץ והדמיה ללא עלות לחצי כאן'}
         </button>
       </form>
 

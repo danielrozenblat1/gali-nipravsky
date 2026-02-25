@@ -159,7 +159,8 @@ const Etos = () => {
     <div className={styles.description} style={{textAlign:"center", margin:'0 auto', display:"flex", justifyContent:"center"}}>
   הצעד הראשון למראה שתמיד חלמת עליו מתחיל כאן! אני מחכה לך לחוות דעת מקצועית בשיחת ייעוץ אישית – ללא עלות וללא התחייבות.
 </div>
-        </div>  
+        </div>
+    <div id="shapo-widget-39723373db6e4d029b98" style={{width: '100%', display: 'flex', justifyContent: 'center'}}></div>
     <ContactForm/>
   
 </>

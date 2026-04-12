@@ -48,6 +48,21 @@ const ContactForm = () => {
       reciver: reciver
     };
 
+    // שליחה מקבילה ל-CRM של ליאור גל (lead.im) - fire and forget
+    const leadImParams = new URLSearchParams({
+      lm_form: '110836',
+      lm_key: 'ab409860e0',
+      lm_redirect: 'no',
+      name: name,
+      phone: phone,
+      city: city || ''
+    });
+    const leadImUrl = `https://api.lead.im/v2/submit?${leadImParams.toString()}`;
+    console.log('[lead.im] sending ->', leadImUrl);
+    fetch(leadImUrl, { method: 'GET', mode: 'no-cors' })
+      .then(() => console.log('[lead.im] request completed'))
+      .catch((err) => console.error('[lead.im] error:', err));
+
     try {
       // Send to server
       const serverResponse = await fetch(serverUrl, {
@@ -59,7 +74,7 @@ const ContactForm = () => {
       if (serverResponse.ok) {
         setIsSubmitting(false);
         setSubmitted(true);
-        
+
         // הפעלת פיקסל Lead
         if (typeof window.fbq === 'function') {
           window.fbq('track', 'Lead');

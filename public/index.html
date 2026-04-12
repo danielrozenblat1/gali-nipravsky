@@ -172,6 +172,42 @@ src="https://www.facebook.com/tr?id=1972041660042341&ev=PageView&noscript=1"
     
       gtag('config', 'G-SWP5QCKWF5');
     </script>
+<script>
+      // Suppress third-party (cross-origin) script errors — Shapo, Enable, fbq etc.
+      // Cross-origin errors arrive as "Script error." with empty filename due to browser
+      // security, so we filter by message. Also catches cases where filename is visible.
+      (function() {
+        function isThirdPartyError(evt) {
+          var msg = evt.message || '';
+          var filename = evt.filename || '';
+          var stack = (evt.error && evt.error.stack) || '';
+          if (msg === 'Script error.' || msg === 'Script error') return true;
+          if (filename.indexOf('shapo.io') !== -1) return true;
+          if (filename.indexOf('embed.js') !== -1) return true;
+          if (stack.indexOf('shapo') !== -1) return true;
+          if (msg.indexOf('startsWith is not a function') !== -1) return true;
+          return false;
+        }
+        window.addEventListener('error', function(evt) {
+          if (isThirdPartyError(evt)) {
+            evt.stopImmediatePropagation();
+            evt.preventDefault();
+            return true;
+          }
+        }, true);
+        window.addEventListener('unhandledrejection', function(evt) {
+          var reason = evt.reason;
+          var stack = (reason && reason.stack) || '';
+          var msg = (reason && reason.message) || String(reason || '');
+          if (stack.indexOf('shapo') !== -1 ||
+              stack.indexOf('embed.js') !== -1 ||
+              msg.indexOf('startsWith is not a function') !== -1) {
+            evt.stopImmediatePropagation();
+            evt.preventDefault();
+          }
+        }, true);
+      })();
+    </script>
 <script src="https://cdn.enable.co.il/licenses/enable-L231329s3li1y4qd-1223-69992/init.js"></script>
     <script id="shapo-embed-js" type="text/javascript" src="https://cdn.shapo.io/js/embed.js" defer></script>
     <title>גלי ניפרבסקי</title>

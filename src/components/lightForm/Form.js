@@ -48,20 +48,17 @@ const ContactForm = () => {
       reciver: reciver
     };
 
-    // שליחה מקבילה ל-CRM של ליאור גל (lead.im) - fire and forget
-    const leadImParams = new URLSearchParams({
-      lm_form: '110836',
-      lm_key: 'ab409860e0',
-      lm_redirect: 'no',
-      name: name,
-      phone: phone,
-      city: city || ''
-    });
-    const leadImUrl = `https://api.lead.im/v2/submit?${leadImParams.toString()}`;
-    console.log('[lead.im] sending ->', leadImUrl);
-    fetch(leadImUrl, { method: 'GET', mode: 'no-cors' })
-      .then(() => console.log('[lead.im] request completed'))
-      .catch((err) => console.error('[lead.im] error:', err));
+    // שליחה מקבילה לוובהוק CRM - fire and forget
+    const webhookUrl = 'https://webhooks.pipely.co.il/catch-lead?client_id=af78af4c-4e31-4117-98a0-69b95765102e';
+    console.log('[webhook] sending ->', webhookUrl);
+    fetch(webhookUrl, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: {'Content-Type': 'text/plain;charset=UTF-8'},
+      body: JSON.stringify({ name: name, phone: phone, city: city || '' })
+    })
+      .then(() => console.log('[webhook] request completed'))
+      .catch((err) => console.error('[webhook] error:', err));
 
     try {
       // Send to server
